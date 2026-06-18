@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://burv07w35tgwm"]
 
 [ext_resource type="Script" uid="uid://biraeyj5pq1lb" path="res://player/player_movement.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://jweyjlqvfv10" path="res://player/player_camera.gd" id="2_ciewh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh265"]
 albedo_color = Color(0.72351456, 2.3704395e-06, 7.70092e-07, 1)
@@ -10,7 +11,10 @@ material = SubResource("StandardMaterial3D_sh265")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_0khpw"]
+
 [node name="Player" type="CharacterBody3D" unique_id=331115855]
+top_level = true
 script = ExtResource("1_3vyb7")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=173212495]
@@ -23,8 +27,14 @@ mesh = SubResource("CapsuleMesh_4flbx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_onrkg")
 
-[node name="CameraPivot" type="Marker3D" parent="." unique_id=812345877]
+[node name="CameraPivot" type="Marker3D" parent="." unique_id=2094508380]
+script = ExtResource("2_ciewh")
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=444844669]
-transform = Transform3D(1, 0, 0, 0, 0.9063078, 0.4226183, 0, -0.4226183, 0.9063078, 0, 3.0000002, 2.4999998)
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=96751206]
+transform = Transform3D(1, 0, 0, 0, 0.9961947, -0.08715574, 0, 0.08715574, 0.9961947, 0, 2.46, 1.4)
+shape = SubResource("SphereShape3D_0khpw")
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1196104350]
+transform = Transform3D(1, 0, 0, 0, 0.9063078, 0.4226183, 0, -0.4226183, 0.9063078, 0, 0, 0)
 fov = 100.0
