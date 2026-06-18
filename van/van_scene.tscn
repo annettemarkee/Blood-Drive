@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://2hhrbcm530vp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1uw71"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nvqkf"]
+
+[node name="VanScene" type="Node3D" unique_id=1185805544]
+
+[node name="RigidBody3D (Car)" type="RigidBody3D" parent="." unique_id=1153478177]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D (Car)" unique_id=690570591]
+shape = SubResource("SphereShape3D_1uw71")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D (Car)" unique_id=111236546]
+transform = Transform3D(1.5, 0, 0, 0, 0.8, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("BoxMesh_nvqkf")

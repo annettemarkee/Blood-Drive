@@ -14,17 +14,17 @@ func _physics_process(delta):
 	var direction = Vector3.ZERO
 
 	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("player_move_right"):
 		direction.x += 1
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("player_move_left"):
 		direction.x -= 1
-	if Input.is_action_pressed("move_back"):
+	if Input.is_action_pressed("player_move_back"):
 		# Notice how we are working with the vector's x and z axes.
 		# In 3D, the XZ plane is the ground plane.
 		direction.z += 1
-	if Input.is_action_pressed("move_forward"):
+	if Input.is_action_pressed("player_move_forward"):
 		direction.z -= 1
-	if Input.is_action_pressed("jump") && is_on_floor():
+	if Input.is_action_pressed("player_move_jump") && is_on_floor():
 		# Apply upward force
 		target_velocity.y = jump_impulse
 	
