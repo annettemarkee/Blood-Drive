@@ -11,7 +11,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		# Rotate horizontally (around the player)
-		rotation.y -= event.relative.x * mouse_sensitivity
+		# rotation.y -= event.relative.x * mouse_sensitivity
 		
 		# Rotate vertically (pitch)
 		rotation.x -= event.relative.y * mouse_sensitivity
