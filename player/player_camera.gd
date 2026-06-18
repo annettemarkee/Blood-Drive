@@ -1,7 +1,7 @@
 extends Marker3D
 
 @export var mouse_sensitivity := 0.005
-@export var min_pitch := -0.5
+@export var min_pitch := -0.9
 @export var max_pitch := 0.8
 
 func _ready() -> void:
