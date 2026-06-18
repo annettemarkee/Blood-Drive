@@ -23,7 +23,6 @@ script = ExtResource("1_3vyb7")
 mesh = SubResource("CapsuleMesh_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1564041183]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="CameraPivot" type="Marker3D" parent="." unique_id=2094508380]
