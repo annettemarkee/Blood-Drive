@@ -13,7 +13,6 @@ material = SubResource("StandardMaterial3D_sh265")
 [sub_resource type="SphereShape3D" id="SphereShape3D_0khpw"]
 
 [node name="Player" type="CharacterBody3D" unique_id=331115855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 top_level = true
 script = ExtResource("1_3vyb7")
 
